@@ -1,0 +1,6 @@
+<input [(ngModel)]="newFunctionalityName" placeholder="Enter functionality name" />
+<button (click)="addNewFunctionality()">Add Functionality</button>
+
+<ul>
+  <li *ngFor="let functionality of functionalities">{{ functionality.description }}</li>
+</ul>

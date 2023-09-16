@@ -1,0 +1,26 @@
+<div class="column">
+  <h3>{{ columnTitle }}</h3>
+  <button (click)="addNewTask()">Add New Task</button>
+  
+  <div 
+    cdkDropList 
+    [id]="'column-' + columnId" 
+    [cdkDropListData]="tasks" 
+    [cdkDropListConnectedTo]="connectedTo"
+    (cdkDropListDropped)="onTaskDropped($event)"
+  >
+    <!-- Single loop for tasks -->
+    <app-task 
+      *ngFor="let task of tasks" 
+      [task]="task" 
+      cdkDrag 
+      [cdkDragData]="task"
+      (taskDeleted)="removeTaskFromView($event)"
+    ></app-task>
+
+    <!-- Placeholder for an empty column -->
+    <div *ngIf="tasks.length === 0" class="empty-drop-placeholder">
+      Drop here
+    </div>
+  </div>
+</div>

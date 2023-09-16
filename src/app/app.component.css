@@ -1,0 +1,16 @@
+.app-container {
+    display: flex;
+  }
+  
+  .functionality-side-panel {
+    flex: 0.2;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: calc(100vh - 40px);
+  }
+  
+  .board-section {
+    flex: 0.8;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,18 @@
+.task-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .functionality {
+    color: #007bff;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-right: 5px;
+  }
+  
